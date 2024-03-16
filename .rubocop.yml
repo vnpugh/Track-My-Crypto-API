@@ -1,0 +1,16 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "db/schema.rb"
+    - "bin/*"
+    - "node_modules/**/*"
+
+# Limit line length to 120 characters
+Metrics/LineLength:
+  Max: 120
+
+# Ensure Rails cops are enabled
+Rails:
+  Enabled: true
