@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   resources :users
   post 'signup', to: 'users#create'
   post 'login', to: 'authentication#login'
+  get 'simple_price', to: 'cryptos#simple_price'
+  get 'market_data', to: 'cryptos#market_data'
+  get 'historical_data/:id', to: 'cryptos#historical_data', as: 'historical_data'
 end
