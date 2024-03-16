@@ -14,7 +14,7 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
 
-  validate :validate_watchlists_count       
+  validate :validate_watchlists_count
 
   # bcrypt to hash passwords
   has_secure_password
@@ -28,6 +28,6 @@ class User < ApplicationRecord
   private
 
   def validate_watchlists_count
-    errors.add(:watchlists, "exceeds maximum number of 10") if watchlists.count > 10
+    errors.add(:watchlists, 'exceeds maximum number of 10') if watchlists.count > 10
   end
 end
