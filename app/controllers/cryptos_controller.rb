@@ -17,7 +17,8 @@ class CryptosController < ApplicationController
       response = fetch_data_with_faraday("#{BASE_URI}/coins/markets?vs_currency=#{vs_currency}&ids=#{ids}")
       render json: response
     end
-  
+
+
     def historical_data
       id = params[:id]
       date = params[:date]
